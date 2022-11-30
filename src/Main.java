@@ -1,89 +1,28 @@
-import java.util.Random;
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("-----<<<Start game>>>-----" + "\n" + "Predicate amount of points (2 ... 12)" + "\n" + "Write here:");
-        Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        int count = 1;
-        if (number > 2 && number < 12) {
-            while (count != 4) {
-                game(number);
-                count++;
-                if (count != 4) {
-                    System.out.println("-----<<<Round " + count + ">>>-----" + "\n" + "Predicate amount of points (2 ... 12)" + "\n" + "Write here:");
-                    number = scanner.nextInt();
-                }
-            }
-        }
+     animal();
     }
-    public static void game(int a) {
-        Random random = new Random();
-        int ran = random.nextInt(1, 6);
-        int ran0 = random.nextInt(1, 6);
-        cubUser1(ran);
-        cubUser1(ran0);
-        int plus = ran + ran0;
-        int b = Math.max(plus, a);
-        int c = Math.min(plus, a);
-        int d = b - c;
-        int p = d * 2;
-        int botNumber = random.nextInt(2, 12);
-        System.out.println("Number bot: " + botNumber);
-        int superPlus = random.nextInt(1, 6);
-        int superMinus = random.nextInt(1, 6);
-        cubUser1(superPlus);
-        cubUser1(superMinus);
-        int megaPlus = superPlus + superMinus;
-        int q = Math.max(megaPlus, botNumber);
-        int w = Math.min(megaPlus, botNumber);
-        int e = q - w;
-        int o = e * 2;
-        System.out.println("-----Current score-----");
-        System.out.println("point user: " + p + "\n" + "point bot: " + o);
-        int countUser = 0;
-        int countBot = 0;
-        int countDraw = 0;
-        if (p > o) {
-            int num = p - o;
-            System.out.println("User is ahead by " + num + " points!");
-            countUser++;
-        } else if (p == o) {
-            System.out.println("Draw");
-            countDraw++;
-        } else {
-            int num1 = p - o;
-            System.out.println("Bot is ahead by " + num1 + " points!");
-            countBot++;
-        }
-        if (countBot > countUser && countDraw < countBot) {
-            System.out.println("Bot win");
-        } else if (countUser > countBot && countUser > countDraw) {
-            System.out.println("User win");
-        } else {
-            System.out.println("Draw");
-        }
-    }
-    public static void cubUser1(int randomForCub) {
-        switch (randomForCub) {
-            case 1:
-                System.out.println("+-------+\n|       |\n|   #   |\n|       |\n+-------+");
-                break;
-            case 2:
-                System.out.println("+-------+\n| #     |\n|       |\n|     # |\n+-------+");
-                break;
-            case 3:
-                System.out.println("+-------+\n|     # |\n|   #   |\n| #     |\n+-------+");
-                break;
-            case 4:
-                System.out.println("+-------+\n| # #   |\n| # #   |\n|       |\n+-------+");
-                break;
-            case 5:
-                System.out.println("+-------+\n| #   # |\n|   #   |\n| #   # |\n+-------+");
-                break;
-            case 6:
-                System.out.println("+-------+\n| #   # |\n| #   # |\n| #   # |\n+-------+");
-                break;
-        }
+    public static void animal(){
+
+     Cow cow = new Cow(300,3,"bull","Masha");
+     Cow cow1 = new Cow(233,4,"cow","Targyl");
+     Cow cow2 = new Cow(200,2,"cow","krivaya");
+     Cow cow3 = new Cow(200,2,"bull","Misha");
+     Cow cow4 = new Cow(400,5,"bull","Tashbash");
+     Cow[] cow5 = {cow,cow1,cow2,cow3,cow4};
+     Cow[] cow6 = {cow4};
+     Horse horse = new Horse(200,3,"Erkek","Shumkar");
+     Horse horse1 = new Horse(100,1,"woman","Kashka");
+     Horse[] horses = {horse,horse1};
+     Horse[] horse2 = {horse};
+     Sheep sheep = new Sheep(50,2,"Erkek","Megamisha");
+     Sheep sheep1 = new Sheep(40,2,"Urgachy","Meka");
+     Sheep sheep2 = new Sheep(60,4,"Urgachy","Tolstushka");
+     Sheep[] sheep3 = {sheep,sheep1,sheep2};
+     Sheep[] sheep4 = {sheep};
+     Farm farm = new Farm("Kok-jar",cow5,sheep3,horses);
+     System.out.println(farm);
+     Farm2 farm2 = new Farm2("Kok-Tash",cow6,sheep4,horse2);
+     System.out.println(farm2);
     }
 }
