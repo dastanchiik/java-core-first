@@ -3,7 +3,6 @@ public class Main {
      animal();
     }
     public static void animal(){
-
      Cow cow = new Cow(300,3,"male","Masha");
      Cow cow1 = new Cow(233,4,"female","Targyl");
      Cow cow2 = new Cow(200,2,"female","krivaya");
