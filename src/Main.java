@@ -20,9 +20,9 @@ public class Main {
      Sheep sheep2 = new Sheep(60,4,"female","Tolstushka");
      Sheep[] sheep3 = {sheep,sheep1,sheep2};
      Sheep[] sheep4 = {sheep};
-     Farm farm = new Farm("Kok-jar",cow5,sheep3,horses);
+     Farm farm = new Farm("Kok-jar",cow5,sheep3,horses,"Elbek");
      System.out.println(farm);
-     Farm2 farm2 = new Farm2("Kok-Tash",cow6,sheep4,horse2);
+     Farm2 farm2 = new Farm2("Kok-Tash",cow6,sheep4,horse2,"Bakyt");
      System.out.println(farm2);
     }
 }
