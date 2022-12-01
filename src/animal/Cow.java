@@ -1,7 +1,11 @@
-public class Horse extends Animal{
+package animal;
+
+import animal.Animal;
+
+public class Cow extends Animal {
     private String nickName;
 
-    public Horse(int weight, int age, String gender, String nickName) {
+    public Cow(int weight, int age, String gender, String nickName) {
         super(weight, age, gender);
         this.nickName = nickName;
     }
@@ -17,7 +21,7 @@ public class Horse extends Animal{
     @Override
     public String toString() {
         return
-                "nickName='" + nickName + '\''+
+                "nickName='" + nickName + '\'' +
                 super.toString();
     }
 }
