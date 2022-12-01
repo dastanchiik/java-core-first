@@ -1,3 +1,7 @@
+package animal;
+
+import animal.Cow;
+
 import java.util.Arrays;
 
 public class Farm2 {
@@ -7,7 +11,7 @@ public class Farm2 {
     private Sheep[] sheep;
     private Horse[] horse;
 
-    public Farm2( String nameFarm2, Cow[] cow, Sheep[] sheep, Horse[] horse,String ownerName) {
+    public Farm2(String nameFarm2, Cow[] cow, Sheep[] sheep, Horse[] horse, String ownerName) {
         this.nameFarm2 = nameFarm2;
         this.cow = cow;
         this.sheep = sheep;
@@ -17,7 +21,7 @@ public class Farm2 {
 
     @Override
     public String toString() {
-        return "Farm{" +
+        return "animal.Farm{" +
                 "nameFarm 2='" + nameFarm2 + '\'' +
                 ", ownerName='" + ownerName + '\'' +"\n"+
                 ", cow=" + Arrays.toString(cow) +"\n"+

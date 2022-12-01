@@ -1,3 +1,10 @@
+package animal;
+
+import animal.Cow;
+import animal.Farm;
+import animal.Farm2;
+import animal.Horse;
+
 public class Main {
     public static void main(String[] args) {
      animal();
