@@ -9,10 +9,7 @@ public class Person2 extends Person{
         this.gender = gender;
     }
 
-   /** public Person2(String name, int age, double height, String gender) {
-        super(name, age, height);
-        this.gender = gender;
-    }*/
+
 
     @Override
     public String toString() {
