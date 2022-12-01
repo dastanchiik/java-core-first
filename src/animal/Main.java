@@ -8,7 +8,6 @@ import animal.Horse;
 public class Main {
     public static void main(String[] args) {
      animal();
-     animal();
     }
     public static void animal(){
      Cow cow = new Cow(300,3,"male","Masha");
