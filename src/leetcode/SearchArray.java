@@ -1,48 +1,31 @@
 package leetcode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class SearchArray {
     public static void main(String[] args) {
     int[]arr = {1,2,9};
-        plusOne(arr);
+        System.out.println(Arrays.toString(plusOne(arr)));
     }
     public static int[] plusOne(int[] digits) {
+        List<Integer> list = new ArrayList<>();
         StringBuilder str = new StringBuilder();
         for (int digit : digits) {
             str.append(digit);
         }
         int a = Integer.parseInt(String.valueOf(str));
-        int arr = a+1;
-//        int arr = Integer.MAX_VALUE;
-        StringBuilder s = new StringBuilder();
-        System.out.println(arr);
-        while(arr>0) {
-            s.insert(0, arr%10);
-            arr = arr / 10;
-        }
-        System.out.println(s+" ");
+        int arr = a + 1;
 
-//     LinkedList<Integer>list = new LinkedList<>();
-//     int[] a = {1,2,9};
-//     int e = 0;
-//        int q = digits.length-1;
-//        digits[q]++;
-//
-//        for (Integer r:digits) {
-//        list.add(r);
+        //        ArrayList<Integer> result = new ArrayList<>();
+//        while(arr > 0){
+//            result.add(arr%10);
+//            arr = arr/10;
 //        }
-//        if (list.getLast()>9){
-//           int index = list.indexOf(list.getLast());
-//           int notIndex = list.indexOf(list.getLast());
-//            list.set(index,0);
-//            int z = list.get(notIndex);
-//            z++;
-//            list.set(notIndex,z);
-//            notIndex++;
-//        }
-//        list.forEach(System.out::println);
-        return null;
-/**        return list;
-   */ }
+//        Collections.reverse(result);
+//        int e = Integer.parseInt(String.valueOf(result));
+      return new int[]{e};
+    }
 }
