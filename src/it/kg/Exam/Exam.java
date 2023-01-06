@@ -18,11 +18,11 @@ public class Exam {
     public static void method(ArrayList<String> list, String a) {
         List<String> matches = list.stream().filter(it -> it.contains(a)).toList();
         ArrayList<String> array = new ArrayList<>(matches);
-        System.out.println("original: "+list);
+        System.out.println("original elements: "+list);
         for (String e:array) {
             list.remove(e);
         }
-        System.out.println("after remove: "+list);
-        System.out.println("remove: "+matches+"\n"+"because have letter <<<<<<<<<"+a+">>>>>>>>>");
+        System.out.println("elements after remove: "+list);
+        System.out.println("elements remove: "+matches+"\n"+"because have letter: <<<<<<<<<  -> "+a+" <-  >>>>>>>>>");
     }
 }
