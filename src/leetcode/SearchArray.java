@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class SearchArray {
     public static void main(String[] args) {
-    int[]arr = {1,2,9};
-        System.out.println(Arrays.toString(plusOne(arr)));
+    int[]arr = {987654320};
+        System.out.print(Arrays.toString(plusOne(arr)));
     }
     public static int[] plusOne(int[] digits) {
         List<Integer> list = new ArrayList<>();
@@ -19,13 +20,14 @@ public class SearchArray {
         int a = Integer.parseInt(String.valueOf(str));
         int arr = a + 1;
 
-        //        ArrayList<Integer> result = new ArrayList<>();
-//        while(arr > 0){
-//            result.add(arr%10);
-//            arr = arr/10;
-//        }
-//        Collections.reverse(result);
-//        int e = Integer.parseInt(String.valueOf(result));
-      return new int[]{e};
+        char[] chars = String.valueOf(arr).toCharArray();
+        for (char aChar : chars) {
+            list.add(Integer.parseInt(String.valueOf(aChar)));
+        }
+        int[] bgkrmgr = new int[list.size()];
+        for (int i = 0; i < bgkrmgr.length; i++) {
+            bgkrmgr[i] = list.get(i);
+        }
+        return bgkrmgr;
     }
 }
