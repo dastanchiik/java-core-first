@@ -9,11 +9,11 @@ public class Exam {
         list.add("Elmirbek");
         list.add("Mbappe");
         list.add("Bakyt");
-        list.add("Levandovsky");
+        list.add("Lewandovsky");
         list.add("Neymar");
         list.add("Ronaldo");
         list.add("Messi");
-        method(list,"n");
+        method(list,"l");
     }
     public static void method(ArrayList<String> list, String a) {
         List<String> matches = list.stream().filter(it -> it.contains(a)).toList();
@@ -23,6 +23,6 @@ public class Exam {
             list.remove(e);
         }
         System.out.println("after remove: "+list);
-        System.out.println("remove: "+matches+"\n"+"because have letter <<<"+a+">>>");
+        System.out.println("remove: "+matches+"\n"+"because have letter <<<<<<<<<"+a+">>>>>>>>>");
     }
 }
