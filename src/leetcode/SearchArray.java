@@ -8,26 +8,16 @@ import java.util.stream.Stream;
 
 public class SearchArray {
     public static void main(String[] args) {
-    int[]arr = {987654320};
-        System.out.print(Arrays.toString(plusOne(arr)));
+    char[]arr = {'h','e','l','l','l','o'};
+        reverseString(arr);
     }
-    public static int[] plusOne(int[] digits) {
-        List<Integer> list = new ArrayList<>();
-        StringBuilder str = new StringBuilder();
-        for (int digit : digits) {
-            str.append(digit);
+        public static void  reverseString(char[] s) {
+         String s1 = String.valueOf(new StringBuilder(String.valueOf(s)).reverse());
+         char[] chars = s1.toCharArray();
+            System.out.print("[");
+            for (char f:chars ) {
+                System.out.print("'"+f+"'");
+            }
+            System.out.print("]");
         }
-        int a = Integer.parseInt(String.valueOf(str));
-        int arr = a + 1;
-
-        char[] chars = String.valueOf(arr).toCharArray();
-        for (char aChar : chars) {
-            list.add(Integer.parseInt(String.valueOf(aChar)));
-        }
-        int[] bgkrmgr = new int[list.size()];
-        for (int i = 0; i < bgkrmgr.length; i++) {
-            bgkrmgr[i] = list.get(i);
-        }
-        return bgkrmgr;
     }
-}
