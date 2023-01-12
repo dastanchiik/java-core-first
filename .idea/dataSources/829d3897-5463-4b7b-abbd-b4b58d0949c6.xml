@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>775</IntrospectionStateNumber>
+      <IntrospectionStateNumber>783</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
-      <StartupTime>1673428380</StartupTime>
+      <StartupTime>1673501803</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>775</IntrospectionStateNumber>
+      <IntrospectionStateNumber>783</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4228,126 +4228,39 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>775</IntrospectionStateNumber>
+      <IntrospectionStateNumber>783</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <table id="263" parent="262" name="person">
-      <ObjectId>16431</ObjectId>
-      <StateNumber>767</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="264" parent="262" name="sports">
+    <table id="263" parent="262" name="sports">
       <ObjectId>16442</ObjectId>
       <StateNumber>771</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="265" parent="262" name="trainer">
-      <ObjectId>16449</ObjectId>
-      <StateNumber>774</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <column id="266" parent="263" name="user_id">
-      <DasType>integer|0s</DasType>
-      <Position>1</Position>
-      <StateNumber>767</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="267" parent="263" name="user_name">
-      <DasType>text|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>767</StateNumber>
-      <TypeId>25</TypeId>
-    </column>
-    <column id="268" parent="263" name="user_sports">
-      <DasType>text|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>767</StateNumber>
-      <TypeId>25</TypeId>
-    </column>
-    <column id="269" parent="263" name="user_phone">
-      <DasType>integer|0s</DasType>
-      <Position>4</Position>
-      <StateNumber>767</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="270" parent="263" name="user_inn">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>767</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <index id="271" parent="263" name="person_user_id_key">
-      <ColNames>user_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16436</ObjectId>
-      <StateNumber>767</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="272" parent="263" name="person_user_phone_key">
-      <ColNames>user_phone</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16438</ObjectId>
-      <StateNumber>767</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="273" parent="263" name="person_user_inn_key">
-      <ColNames>user_inn</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16440</ObjectId>
-      <StateNumber>767</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="274" parent="263" name="person_user_id_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16437</ObjectId>
-      <StateNumber>767</StateNumber>
-      <UnderlyingIndexId>16436</UnderlyingIndexId>
-    </key>
-    <key id="275" parent="263" name="person_user_phone_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16439</ObjectId>
-      <StateNumber>767</StateNumber>
-      <UnderlyingIndexId>16438</UnderlyingIndexId>
-    </key>
-    <key id="276" parent="263" name="person_user_inn_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16441</ObjectId>
-      <StateNumber>767</StateNumber>
-      <UnderlyingIndexId>16440</UnderlyingIndexId>
-    </key>
-    <column id="277" parent="264" name="sport_id">
+    <column id="264" parent="263" name="sport_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>771</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="278" parent="264" name="sport_name">
+    <column id="265" parent="263" name="sport_name">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>771</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="279" parent="264" name="sport_salary">
+    <column id="266" parent="263" name="sport_salary">
       <DasType>numeric|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>771</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <index id="280" parent="264" name="sports_sport_id_key">
+    <index id="267" parent="263" name="sports_sport_id_key">
       <ColNames>sport_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16447</ObjectId>
@@ -4355,103 +4268,11 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="281" parent="264" name="sports_sport_id_key">
+    <key id="268" parent="263" name="sports_sport_id_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16448</ObjectId>
       <StateNumber>771</StateNumber>
       <UnderlyingIndexId>16447</UnderlyingIndexId>
-    </key>
-    <column id="282" parent="265" name="user_id">
-      <DasType>numeric|0s</DasType>
-      <Position>1</Position>
-      <StateNumber>774</StateNumber>
-      <TypeId>1700</TypeId>
-    </column>
-    <column id="283" parent="265" name="user_name">
-      <DasType>text|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>774</StateNumber>
-      <TypeId>25</TypeId>
-    </column>
-    <column id="284" parent="265" name="user_sports">
-      <DasType>text|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>774</StateNumber>
-      <TypeId>25</TypeId>
-    </column>
-    <column id="285" parent="265" name="user_phone">
-      <DasType>integer|0s</DasType>
-      <Position>4</Position>
-      <StateNumber>774</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="286" parent="265" name="user_inn">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>774</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <index id="287" parent="265" name="trainer_user_id_key">
-      <ColNames>user_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16454</ObjectId>
-      <StateNumber>774</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="288" parent="265" name="trainer_user_sports_key">
-      <ColNames>user_sports</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16456</ObjectId>
-      <StateNumber>774</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationNames>default</CollationNames>
-      <CollationIds>100</CollationIds>
-      <CollationParentNames>pg_catalog</CollationParentNames>
-    </index>
-    <index id="289" parent="265" name="trainer_user_phone_key">
-      <ColNames>user_phone</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16458</ObjectId>
-      <StateNumber>774</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="290" parent="265" name="trainer_user_inn_key">
-      <ColNames>user_inn</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16460</ObjectId>
-      <StateNumber>774</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="291" parent="265" name="trainer_user_id_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16455</ObjectId>
-      <StateNumber>774</StateNumber>
-      <UnderlyingIndexId>16454</UnderlyingIndexId>
-    </key>
-    <key id="292" parent="265" name="trainer_user_sports_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16457</ObjectId>
-      <StateNumber>774</StateNumber>
-      <UnderlyingIndexId>16456</UnderlyingIndexId>
-    </key>
-    <key id="293" parent="265" name="trainer_user_phone_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16459</ObjectId>
-      <StateNumber>774</StateNumber>
-      <UnderlyingIndexId>16458</UnderlyingIndexId>
-    </key>
-    <key id="294" parent="265" name="trainer_user_inn_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16461</ObjectId>
-      <StateNumber>774</StateNumber>
-      <UnderlyingIndexId>16460</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
