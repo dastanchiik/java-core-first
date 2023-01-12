@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>783</IntrospectionStateNumber>
+      <IntrospectionStateNumber>818</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1673501803</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>783</IntrospectionStateNumber>
+      <IntrospectionStateNumber>818</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4228,51 +4228,59 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>783</IntrospectionStateNumber>
+      <IntrospectionStateNumber>818</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <table id="263" parent="262" name="sports">
-      <ObjectId>16442</ObjectId>
-      <StateNumber>771</StateNumber>
+    <table id="263" parent="262" name="users">
+      <ObjectId>16503</ObjectId>
+      <StateNumber>817</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="264" parent="263" name="sport_id">
+    <column id="264" parent="263" name="student_id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>771</StateNumber>
+      <StateNumber>813</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="265" parent="263" name="sport_name">
-      <DasType>text|0s</DasType>
+    <column id="265" parent="263" name="student_name">
+      <DasType>varchar|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>771</StateNumber>
-      <TypeId>25</TypeId>
+      <StateNumber>813</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="266" parent="263" name="sport_salary">
-      <DasType>numeric|0s</DasType>
+    <column id="266" parent="263" name="student_age">
+      <DasType>smallint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>771</StateNumber>
-      <TypeId>1700</TypeId>
+      <StateNumber>813</StateNumber>
+      <TypeId>21</TypeId>
     </column>
-    <index id="267" parent="263" name="sports_sport_id_key">
-      <ColNames>sport_id</ColNames>
+    <column id="267" parent="263" name="student_email">
+      <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>813</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="268" parent="263" name="students_pkey">
+      <ColNames>student_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16447</ObjectId>
-      <StateNumber>771</StateNumber>
+      <ObjectId>16508</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>813</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="268" parent="263" name="sports_sport_id_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16448</ObjectId>
-      <StateNumber>771</StateNumber>
-      <UnderlyingIndexId>16447</UnderlyingIndexId>
+    <key id="269" parent="263" name="students_pkey">
+      <ObjectId>16509</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>813</StateNumber>
+      <UnderlyingIndexId>16508</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
