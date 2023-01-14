@@ -1,7 +1,6 @@
 package it.kg.Exam;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -13,7 +12,7 @@ public class Main {
 
     }
     public static void method(ArrayList<String>lists, String word){
-       List<Boolean> arr = Collections.singletonList(lists.contains(word));
-        System.out.println(arr);
+       List<String>list = lists.stream().filter(x -> x.contains(word)).toList();
+        System.out.println(list);
     }
 }
