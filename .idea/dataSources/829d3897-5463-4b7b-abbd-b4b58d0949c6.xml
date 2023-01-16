@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>834</IntrospectionStateNumber>
+      <IntrospectionStateNumber>840</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1673501803</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>834</IntrospectionStateNumber>
+      <IntrospectionStateNumber>840</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4228,74 +4228,88 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>834</IntrospectionStateNumber>
+      <IntrospectionStateNumber>840</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="263" parent="262" name="users_id_seq">
-      <DasType>integer|0s</DasType>
-      <ObjectId>16522</ObjectId>
-      <StateNumber>833</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <table id="264" parent="262" name="users">
-      <ObjectId>16523</ObjectId>
-      <StateNumber>833</StateNumber>
+    <table id="263" parent="262" name="people">
+      <ObjectId>16531</ObjectId>
+      <StateNumber>839</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="265" parent="264" name="id">
+    <column id="264" parent="263" name="id">
       <DasType>integer|0s</DasType>
-      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>833</StateNumber>
-      <SequenceId>16522</SequenceId>
+      <StateNumber>839</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="266" parent="264" name="user_name">
-      <DasType>varchar|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="265" parent="263" name="first_name">
+      <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
-      <StateNumber>833</StateNumber>
+      <StateNumber>839</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="267" parent="264" name="user_age">
-      <DasType>numeric|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="266" parent="263" name="last_name">
+      <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>833</StateNumber>
-      <TypeId>1700</TypeId>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="268" parent="264" name="user_high">
-      <DasType>numeric|0s</DasType>
+    <column id="267" parent="263" name="email">
+      <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>833</StateNumber>
-      <TypeId>1700</TypeId>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="269" parent="264" name="user_iq">
-      <DasType>numeric|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="268" parent="263" name="gender">
+      <DasType>varchar(50)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>833</StateNumber>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="269" parent="263" name="birth_day">
+      <DasType>date|0s</DasType>
+      <Position>6</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="270" parent="263" name="money">
+      <DasType>numeric(11,2 digit)|0s</DasType>
+      <Position>7</Position>
+      <StateNumber>839</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <index id="270" parent="264" name="users_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16529</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>833</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="271" parent="264" name="users_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16530</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>833</StateNumber>
-      <UnderlyingIndexId>16529</UnderlyingIndexId>
-    </key>
+    <column id="271" parent="263" name="height">
+      <DasType>numeric(4,1 digit)|0s</DasType>
+      <Position>8</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="272" parent="263" name="weight">
+      <DasType>integer|0s</DasType>
+      <Position>9</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="273" parent="263" name="city">
+      <DasType>varchar(50)|0s</DasType>
+      <Position>10</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="274" parent="263" name="country">
+      <DasType>varchar(50)|0s</DasType>
+      <Position>11</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="275" parent="263" name="married">
+      <DasType>varchar(50)|0s</DasType>
+      <Position>12</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
   </database-model>
 </dataSource>
