@@ -8,7 +8,7 @@ public class Main {
      int a = name.length();
      int count = 0;
      while (count != a){
-         TimeUnit.SECONDS.sleep(1);
+         TimeUnit.MILLISECONDS.sleep(500);
          System.out.println(name.substring(count));
          count++;
      }
