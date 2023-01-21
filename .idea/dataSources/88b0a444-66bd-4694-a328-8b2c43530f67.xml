@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>3413</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3421</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1673501803</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>3413</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3421</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4228,7 +4228,7 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>3413</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3421</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4247,8 +4247,8 @@ false Zulu
     </sequence>
     <sequence id="265" parent="262" name="products_id_seq">
       <DasType>integer|0s</DasType>
-      <ObjectId>16551</ObjectId>
-      <StateNumber>2852</StateNumber>
+      <ObjectId>16680</ObjectId>
+      <StateNumber>3420</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="262" name="users_id_seq">
@@ -4276,8 +4276,8 @@ false Zulu
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="270" parent="262" name="products">
-      <ObjectId>16552</ObjectId>
-      <StateNumber>2852</StateNumber>
+      <ObjectId>16681</ObjectId>
+      <StateNumber>3420</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4485,52 +4485,52 @@ false Zulu
       <DefaultExpression>nextval(&apos;products_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2852</StateNumber>
-      <SequenceId>16551</SequenceId>
+      <StateNumber>3420</StateNumber>
+      <SequenceId>16680</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="302" parent="270" name="product_name">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2852</StateNumber>
+      <StateNumber>3420</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="303" parent="270" name="manufacturer">
       <DasType>varchar(30)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>2852</StateNumber>
+      <StateNumber>3420</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="304" parent="270" name="product_count">
+    <column id="304" parent="270" name="productcount">
       <DasType>integer|0s</DasType>
       <DefaultExpression>0</DefaultExpression>
       <Position>4</Position>
-      <StateNumber>2852</StateNumber>
+      <StateNumber>3420</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="305" parent="270" name="price">
       <DasType>numeric|0s</DasType>
       <Position>5</Position>
-      <StateNumber>2852</StateNumber>
+      <StateNumber>3420</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <index id="306" parent="270" name="products_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16559</ObjectId>
+      <ObjectId>16688</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2852</StateNumber>
+      <StateNumber>3420</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="307" parent="270" name="products_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16560</ObjectId>
+      <ObjectId>16689</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2852</StateNumber>
-      <UnderlyingIndexId>16559</UnderlyingIndexId>
+      <StateNumber>3420</StateNumber>
+      <UnderlyingIndexId>16688</UnderlyingIndexId>
     </key>
     <column id="308" parent="271" name="id">
       <DasType>integer|0s</DasType>
