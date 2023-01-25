@@ -14,7 +14,7 @@ public class Main {
         ArrayList<Integer> list1 = new ArrayList<>();
         list.add(1);
         list1.add(1);
-        if (list1 == list) {
+        if (list1.equals(list)) {
             System.out.println("True");
         } else {
             System.out.println("False");
