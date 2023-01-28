@@ -6,95 +6,18 @@ public class Solution {
         int a = scanner.nextInt();
         int b = a * a;
         int c = 0;
-        while (c < b) {
-
-        for (int i = 0; i < c; i++) {
-            System.out.println(c);
-            for (int j = 0; j < c-1; j++) {
-                System.out.println(c);
+        while (c <= b) {
+                c++;
+            for (int i = 0; i < b; ++i) {
+                for (int j = 0; j < i; ++j){
+                    System.out.print(c);
+                System.out.println();
+                }
             }
         }
-        c++;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //        System.out.println(getNumDigits(10000, 10401));
+    }
+}
+//        System.out.println(getNumDigits(10000, 10401));
 //    }
 //
 //    public static int getNumDigits(int numCount, int END) {
@@ -114,6 +37,3 @@ public class Solution {
 //        }
 //
 //        return numDigits;
-
-    }
-}
