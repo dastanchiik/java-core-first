@@ -1,33 +1,34 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game2 {
+    private static ArrayList<Character> userChars = new ArrayList<>();
+    private static String word = "spun";
+    private static StringBuilder answer = new StringBuilder();
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String str = "Hello";
-        char a = scanner.next().charAt(0);
-//        int count = 0;
-        for (int i = 0; i < str.length(); i++) {
-            printCharsInWord(str, a);
-            a = scanner.next().charAt(0);
+//        System.out.printf("Ваше слово состоит из %d букв%n", word.length());
+        for (int i = 0; i < word.length(); i++) {
+            System.out.print("_");
         }
-
+        System.out.println();
+        String tmpAnswer = "";
+        while (!word.equals(tmpAnswer)) {
+            tmpAnswer = getAnswerString(scanner.next());
+            System.out.println(tmpAnswer);
+        }
     }
 
-    private static void printCharsInWord(String word, char userChar) {
-        LinkedList<String> linkedList = new LinkedList<>();
-        StringBuilder string = new StringBuilder();
-        StringBuilder stringBuilder = new StringBuilder();
-            for (char wordsChar : word.toCharArray()) {
-                if (wordsChar == userChar) {
-                    stringBuilder.append(wordsChar);
-                } else {
-                    stringBuilder.append("_");
-            }
+    private static String getAnswerString(String userInputChars) {
+        answer.delete(0, answer.length());
+        if (word.contains(userInputChars))
+            userChars.add(userInputChars.charAt(0));
+        for (char wordsChar : word.toLowerCase().toCharArray()) {
+            if (userChars.contains(wordsChar))
+                answer.append(wordsChar);
+            else answer.append('_');
         }
-            linkedList.add(String.valueOf(stringBuilder));
-            linkedList.set(linkedList.indexOf(linkedList.getLast()), String.valueOf(stringBuilder));
-        System.out.println(linkedList);
-
+        return answer.toString();
     }
 }
