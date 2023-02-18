@@ -8,7 +8,6 @@ public class Game2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-//        System.out.printf("Ваше слово состоит из %d букв%n", word.length());
         for (int i = 0; i < word.length(); i++) {
             System.out.print("_");
         }
