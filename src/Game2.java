@@ -1,35 +1,33 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Game2 {
     public static void main(String[] args) {
-        maximka();
-    }
-    public static void maximka() {
-        String w="телеграмма";
-        System.out.println("Ваше слово состоит из 10 букв");
-        System.out.println("*********");
-        for (int j=0;j<15;j++) {                        //Уважаемый програмист
-            Scanner scan = new Scanner(System.in);      //На код потрачено 5+1 часа
-            System.out.print("\nВведите букву: ");      //И много(очень много) нервов
-            char a = scan.next().charAt(0);
-            char[] b = w.toCharArray();
-            for (int i = 0; i < b.length; i++) {
-                if (b[i] == a) {
-                    b[i] = a;
-                }
-                if (b[i] != a) {
-                    b[i] = '*';
-                }
-            }
-            System.out.println(b);
-            /*char[] c =new  char[10];
-            for (char i=0;i<c.length;i++){
-                if(c[i]==b[i]){
-                    b[i]+=c[i];
-                }
-            }
-           System.out.print(c);
-           */
+        Scanner scanner = new Scanner(System.in);
+        String str = "Hello";
+        char a = scanner.next().charAt(0);
+//        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            printCharsInWord(str, a);
+            a = scanner.next().charAt(0);
         }
+
+    }
+
+    private static void printCharsInWord(String word, char userChar) {
+        LinkedList<String> linkedList = new LinkedList<>();
+        StringBuilder string = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
+            for (char wordsChar : word.toCharArray()) {
+                if (wordsChar == userChar) {
+                    stringBuilder.append(wordsChar);
+                } else {
+                    stringBuilder.append("_");
+            }
+        }
+            linkedList.add(String.valueOf(stringBuilder));
+            linkedList.set(linkedList.indexOf(linkedList.getLast()), String.valueOf(stringBuilder));
+        System.out.println(linkedList);
+
     }
 }
