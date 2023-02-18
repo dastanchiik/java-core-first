@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Game2 {
@@ -5,20 +6,28 @@ public class Game2 {
         Scanner scanner = new Scanner(System.in);
         String str = "Hello";
         char a = scanner.next().charAt(0);
-
+//        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
             printCharsInWord(str, a);
             a = scanner.next().charAt(0);
+        }
+
     }
 
     private static void printCharsInWord(String word, char userChar) {
-        while (true) {
+        LinkedList<String> linkedList = new LinkedList<>();
+        StringBuilder string = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
             for (char wordsChar : word.toCharArray()) {
                 if (wordsChar == userChar) {
-                    System.out.print(wordsChar);
+                    stringBuilder.append(wordsChar);
                 } else {
-                    System.out.print('_');
-                }
+                    stringBuilder.append("_");
             }
         }
+            linkedList.add(String.valueOf(stringBuilder));
+            linkedList.set(linkedList.indexOf(linkedList.getLast()), String.valueOf(stringBuilder));
+        System.out.println(linkedList);
+
     }
 }
