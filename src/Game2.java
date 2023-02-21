@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Game2 {
     private static ArrayList<Character> userChars = new ArrayList<>();
-    private static String word = "netvoiurovendorogoi";
+    private static String word = "super";
     private static StringBuilder answer = new StringBuilder();
 
     public static void main(String[] args) {
