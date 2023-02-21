@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Game2 {
     private static ArrayList<Character> userChars = new ArrayList<>();
     private static String word = "super";
     private static StringBuilder answer = new StringBuilder();
+
     public static void main(String[] args) {
         System.out.println();
         Scanner scanner = new Scanner(System.in);
@@ -17,6 +19,7 @@ public class Game2 {
             System.out.println(tmpAnswer);
         }
     }
+
     private static String getAnswerString(String userInputChars) {
         answer.delete(0, answer.length());
         if (word.contains(userInputChars)) userChars.add(userInputChars.charAt(0));
