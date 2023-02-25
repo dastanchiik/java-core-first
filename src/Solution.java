@@ -25,7 +25,8 @@ public class Solution {
             }
         }
         if (b == a){
-            System.out.println("You are win!!!\nYou are using "+count+" attempt\nright number:"+a);
+            int w = count+1;
+            System.out.println("You are win!!!\nYou are using "+w+" attempt\nright number:"+a);
         }
     }
 }
