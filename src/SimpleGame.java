@@ -4,6 +4,7 @@ import java.awt.event.*;
 
 public class SimpleGame extends JFrame implements ActionListener {
 
+
     private Timer timer;
     private int x = 0;
     private int y = 0;
