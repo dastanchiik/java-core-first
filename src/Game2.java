@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game2 {
-    private static ArrayList<Character> userChars = new ArrayList<>();
+private static ArrayList<Character> userChars = new ArrayList<>();
+
     static String[] words = {
             "apple", "banana", "orange", "pear", "grape", "kiwi", "watermelon", "pineapple",
             "strawberry", "blueberry", "raspberry", "mango", "peach", "apricot", "plum", "cherry",
@@ -21,21 +22,16 @@ public class Game2 {
             "pepper", "sugar", "honey", "jam", "mustard", "ketchup", "mayonnaise", "vinegar", "soy sauce",
             "hot sauce", "salsa", "guacamole", "humus", "pesto", "gravy", "sour cream", "ranch dressing"
     };
-
     private static StringBuilder answer = new StringBuilder();
 
     public static void main(String[] args) {
         Random random = new Random();
-        String word = words[random.nextInt(1,100)];
-        List<String> firstUser = new ArrayList<>();
-        List<String> secondUser = new ArrayList<>();
+        String word = words[random.nextInt(words.length)];
         System.out.println();
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < word.length(); i++) {
             System.out.print("_");
         }
-        System.out.print("attempt first user:");
-        String string = scanner.next();
         System.out.println();
         String tmpAnswer = "";
         while (!word.equals(tmpAnswer)) {
@@ -44,10 +40,9 @@ public class Game2 {
         }
     }
 
-    private static String getAnswerString(String firstUser,String word) {
+    private static String getAnswerString(String userInputChars,String word) {
         answer.delete(0, answer.length());
-        if (word.contains(firstUser))
-        if (word.contains(firstUser)) userChars.add(firstUser.charAt(0));
+        if (word.contains(userInputChars)) userChars.add(userInputChars.charAt(0));
         for (char wordsChar : word.toLowerCase().toCharArray()) {
             if (userChars.contains(wordsChar)) answer.append(wordsChar);
             else answer.append('_');
