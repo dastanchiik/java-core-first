@@ -7,26 +7,31 @@ public class Game2 {
 private static ArrayList<Character> userChars = new ArrayList<>();
 
     static String[] words = {
-            "apple", "banana", "orange", "pear", "grape", "kiwi", "watermelon", "pineapple",
-            "strawberry", "blueberry", "raspberry", "mango", "peach", "apricot", "plum", "cherry",
-            "lemon", "lime", "coconut", "papaya", "fig", "pomegranate", "guava", "grapefruit",
-            "cantaloupe", "honeydew", "avocado", "dragonfruit", "starfruit", "passionfruit",
-            "lychee", "persimmon", "melon", "tangerine", "clementine", "mandarin", "kumquat",
-            "boysenberry", "blackberry", "loganberry", "gooseberry", "currant", "cranberry",
-            "elderberry", "mulberry", "cherry", "pepper", "onion", "garlic", "ginger", "carrot",
-            "celery", "cucumber", "tomato", "potato", "sweet potato", "yam", "broccoli", "cauliflower",
-            "spinach", "lettuce", "cabbage", "kale", "asparagus", "eggplant", "zucchini", "squash",
-            "bell pepper", "corn", "peas", "beans", "lentils", "chickpeas", "tofu", "tempeh", "seitan",
-            "quinoa", "rice", "pasta", "bread", "bagel", "croissant", "muffin", "pancake", "waffle",
-            "oatmeal", "cereal", "granola", "yogurt", "cheese", "milk", "cream", "butter", "oil", "salt",
-            "pepper", "sugar", "honey", "jam", "mustard", "ketchup", "mayonnaise", "vinegar", "soy sauce",
-            "hot sauce", "salsa", "guacamole", "humus", "pesto", "gravy", "sour cream", "ranch dressing"
+            "ogon", "kniga", "cvetok", "solnce", "mashina",
+            "musica", "komputer", "drujba", "zvezda", "voda",
+            "puteshestvie", "smeh", "chasy", "lubov", "fotografia",
+            "iazyk", "sport", "snovidenie", "sekret", "ulybka"
+    };
+
+    static String[] explanations = {
+            "Светящаяся и теплая энергия.", "Объект с информацией и рассказами.",
+            "Растение, красивоцветущее.", "Небесное тело, излучает свет и тепло.",
+            "Транспортное средство.", "Искусство из звуков и ритмов.",
+            "Электронное устройство для обработки данных.", "Теплые отношения между людьми.",
+            "Светило в небесах.", "Жидкость, необходимая для жизни.",
+            "Приключение и перемещение.", "Звук в ответ на радость или юмор.",
+            "Устройство для измерения времени.", "Глубокое чувство привязанности и заботы.",
+            "Изображение, зафиксированное камерой.", "Средство общения.",
+            "Физическая активность, часто соревновательная.", "Состояние сознания во сне.",
+            "Информация, известная только некоторым.", "Выражение лица, придающее положительное настроение."
     };
     private static StringBuilder answer = new StringBuilder();
 
     public static void main(String[] args) {
         Random random = new Random();
-        String word = words[random.nextInt(words.length)];
+        int r = random.nextInt(words.length);
+        System.out.println(explanations[r]);
+        String word = words[r];
         System.out.println();
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < word.length(); i++) {

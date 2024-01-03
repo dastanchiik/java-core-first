@@ -1,15 +1,21 @@
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Random;
 
 public class Task {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String a = scanner.next();
-            int count = 0;
-            while (count < a.length()) {
-                System.out.println(a.substring(count));
+        Random random = new Random();
+        int r = random.nextInt();
+        int count = 0;
+        int[] array = new int[5];
+        while (count < 5) {
+            if (r < 0 || r > 50) {
+                r = random.nextInt();
+            } else if (r > 0 && r < 50) {
+                array[count] = r;
                 count++;
+                r = random.nextInt();
             }
         }
+        System.out.println(Arrays.toString(array));
     }
 }
