@@ -11,8 +11,17 @@ public class RockPaperScissors {
         System.out.println("Добро пожаловать в игру Камень-ножницы-бумага!");
 
         while (!gameWon) {
-            System.out.print("Введите свой выбор (камень, ножницы или бумага): ");
-            String playerChoice = scanner.nextLine();
+            System.out.println("Введите свой выбор (камень, ножницы или бумага): ");
+            System.out.println("1 -> камень\n2 -> ножницы\n3 -> бумага");
+            String playerChoice = "";
+            int a = scanner.nextInt();
+            if (a == 1){
+                playerChoice = "камень";
+            } else if (a == 2) {
+                playerChoice = "ножницы";
+            } else if (a == 3) {
+                playerChoice = "бумага";
+            }
             int computerChoice = random.nextInt(3);
 
             System.out.println("Компьютер выбрал: " + options[computerChoice]);
